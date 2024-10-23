@@ -1,7 +1,7 @@
 package com.pluralsight.hotel.operations;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
+
 class ReservationTest {
 
     @org.junit.jupiter.api.Test
@@ -14,11 +14,16 @@ class ReservationTest {
     void isWeekend() {
 
         Reservation res = new Reservation(false,10,"king");
-        assertTrue(res.isWeekend());
+        assertFalse(res.isWeekend());
 
     }
 
     @org.junit.jupiter.api.Test
     void getReservationTotal() {
+        Reservation res = new Reservation(false,1,"king");
+        assertEquals(139.00,res.getReservationTotal());
+
+
     }
+    // check assertions
 }
