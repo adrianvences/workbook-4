@@ -17,6 +17,11 @@ public class Employee {
     }
 
     // getters and setters
+
+    public double punchIn(double time) {
+
+    }
+
     public double getTotalPay() {
         return payRate * Math.min(hoursWorked,40) + getOverTimeHours() * (payRate * 1.5);
     }
